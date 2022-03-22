@@ -5,7 +5,6 @@ console.log(form);
 form.addEventListener('submit', showIncome);
 
 function showIncome(e) {
-  // Clear previous results
   const div = document.querySelector('.results');
   const oldPara = document.querySelector('.monthly-salary');
 
@@ -20,6 +19,7 @@ function showIncome(e) {
   resultsPara.style.color = 'white';
   resultsPara.style.fontSize = '65px';
   resultsTitle.after(resultsPara);
+  // Clear previous results
   if(oldPara) {
     div.replaceChild(resultsPara, oldPara);
   }
